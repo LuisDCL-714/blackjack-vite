@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack - Vite</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">
+        <h1>BLACKJACK</h1>
+      </div>
+      <div class="rule">
+        <div>The dealer must win with 21 points or close</div>
+      </div>
+      <div class="actions">
+        <div class="new-game">
+          <label for="num-players">Núm. jugadores</label>
+          <input
+            class="input"
+            id="num-players"
+            type="number"
+            min="2"
+            max="7"
+            value="2"
+          />
+          <button id="btn-new-game" class="btn btn-danger">Nuevo juego</button>
+        </div>
+        <div class="btn-actions">
+          <button disabled class="btn" id="btn-stop-game">Paso</button>
+        </div>
+      </div>
+      <div id="player-container">
+        <button class="box" id="btn-take-playing-card" disabled>
+          <img
+            src="public/assets/cartas/red_back.png"
+            alt="Mazo de cartas"
+            srcset="public/assets/cartas/red_back.png"
+            style="margin-left: -0.5rem"
+          />
+        </button>
+        <div class="box">
+          <p>Player - <small>0</small></p>
+          <div class="playing-cards"></div>
+        </div>
+      </div>
+      <div id="cpu-players-container">
+        <div class="box">
+          <p>CPU 1 - <small>0</small></p>
+          <div class="playing-cards"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
